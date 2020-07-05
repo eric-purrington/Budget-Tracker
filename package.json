@@ -1,7 +1,7 @@
 {
   "name": "budget-tracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "A budgeting app capable of functioning online and/or offline",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/eric-purrington/Budget-Tracker.git"
   },
-  "author": "",
+  "author": "Eric Purrington",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eric-purrington/Budget-Tracker/issues"
