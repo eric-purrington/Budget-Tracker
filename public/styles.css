@@ -1,11 +1,17 @@
 body {
   font-size: 120%;
-  font-family: Arial;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 button, input {
   font-size: 100%;
-  font-family: Arial;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#add-btn, #sub-btn {
+  color: white;
+  background-color: #007bff;
+  border-radius: 10px;
 }
 
 table {
@@ -34,7 +40,6 @@ tr:nth-child(even) {
 
 .total {
   font-size: 150%;
-  text-decoration: underline;
 }
 
 .form {

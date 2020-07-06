@@ -14,9 +14,15 @@ request.onsuccess = event => {
     }
 }
 
-request.onerror = event => console.log(event.taget.errorCode);
+request.onerror = event => console.log(event.target.errorCode);
 
 function saveRecord(record) {
+    const transaction = db.transaction(["pending"], "readwrite");
+    const store = transaction.objectStore("pending");
+    store.add(record);
+}
+
+function checkDatabase() {
     const transaction = db.transaction(["pending"], "readwrite");
     const store = transaction.objectStore("pending");
     const getAll = store.getAll();
