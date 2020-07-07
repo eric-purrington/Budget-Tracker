@@ -5,13 +5,15 @@ body {
 
 button, input {
   font-size: 100%;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: inherit;
+  margin: 5px;
 }
 
 #add-btn, #sub-btn {
   color: white;
-  background-color: #007bff;
+  background-color: #5291d1;
   border-radius: 10px;
+  border-style: none;
 }
 
 table {
@@ -39,7 +41,11 @@ tr:nth-child(even) {
 }
 
 .total {
-  font-size: 150%;
+  font-size: 175%;
+  color: white;
+  background-color: #5291d1;
+  border-radius: 25px;
+  padding: 15px;
 }
 
 .form {
