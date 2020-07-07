@@ -6,7 +6,6 @@ body {
 button, input {
   font-size: 100%;
   font-family: inherit;
-  margin: 5px;
 }
 
 #add-btn, #sub-btn {
@@ -14,6 +13,10 @@ button, input {
   background-color: #5291d1;
   border-radius: 10px;
   border-style: none;
+}
+
+.fa-piggy-bank {
+  color: rgb(250, 162, 177);
 }
 
 table {
