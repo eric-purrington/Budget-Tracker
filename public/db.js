@@ -3,8 +3,8 @@ let db;
 const request = window.indexedDB.open("budget", 1);
 
 request.onupgradeneeded = event => {
-    let db = event.target.results;
-    db.createObjectStore("pending", { autoIncrement: true });
+    const db = event.target.results;
+    let objectStore = db.createObjectStore("pending", { keyPath: "id", autoIncrement: true });
 };
 
 request.onsuccess = event => {
