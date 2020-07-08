@@ -9,8 +9,8 @@ const FILES_TO_CACHE = [
     "/icons/icon-512x512.png"
 ];
 
-var CACHE = "budget-cache-v1";
-const DATA_CACHE = "data-cache-v1";
+var CACHE = "budget-cache-v2";
+const DATA_CACHE = "data-cache-v2";
 
 self.addEventListener("install", event => {
     event.waitUntil(
