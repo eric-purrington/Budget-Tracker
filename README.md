@@ -2,9 +2,9 @@
 A budgeting app capable of functioning online and/or offline
 
 
-![Gif Demonstration](/public/assets/)
+![Gif Demonstration](/public/assets/Budget-Tracker.gif)
 
-Go [here]() to start budgeting today!
+Go [here](https://ep-budget-tracker.herokuapp.com/) to start budgeting today!
 
 ## Table of Contents 
 
