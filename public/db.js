@@ -1,6 +1,6 @@
 let db;
 
-const request = window.indexedDB.open("budget", 1);
+const request = indexedDB.open("budget", 1);
 
 request.onupgradeneeded = event => {
     const db = event.target.result;
@@ -14,7 +14,7 @@ request.onsuccess = event => {
     }
 };
 
-request.onerror = event => console.log(event.target.errorCode);
+request.onerror = event => console.log("Error: " + event.target.errorCode);
 
 function saveRecord(record) {
     const transaction = db.transaction(["pending"], "readwrite");

@@ -9,7 +9,7 @@ const FILES_TO_CACHE = [
     "/icons/icon-512x512.png"
 ];
 
-var CACHE = "static-cache-v1";
+var CACHE = "static-cache-v2";
 const DATA_CACHE = "data-cache-v1";
 
 self.addEventListener("install", event => {
@@ -33,7 +33,7 @@ self.addEventListener("activate", event => {
 });
 
 self.addEventListener("fetch", event => {
-    if (event.request.url.includes("/api/")) {
+    if (event.request.url.includes("/api")) {
         event.respondWith(
             caches.open(DATA_CACHE).then(cache => {
                 return fetch(event.request).then(response => {
@@ -49,14 +49,8 @@ self.addEventListener("fetch", event => {
         return;
     }
     event.respondWith(
-        fetch(event.request).catch(() => {
-            return caches.match(event.request).then(response => {
-                if (response) {
-                    return response;
-                } else if (event.request.headers.get("accept").includes("text/html")) {
-                    return caches.match("/");
-                }
-            });
+        caches.match(event.request).then(response => {
+            return response || fetch(event.request);
         })
     );
 });
